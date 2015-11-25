@@ -1,0 +1,8 @@
+# SVM-Active-Learning
+This repository contains Python scripts, shell scripts, gnuplot scripts, and datasets for performing Support Vector Machine classification. A Support Vector Machine (SVM) is a binary classification function that assigns a binary label to a set of characteristics. In order for the SVM to do this, it must be trained on some labeled data. There are several different methods for determining which data instances to train an SVM on. The method used for selecting labeled instances of data is referred to as a learning algorithm. An ideal learning algorithm trains an accurate SVM classification function using as few instances of labeled data as possible.
+
+The Python code in this repository reads in a small, random percentage of an input dataset, trains an SVM classification function on the data, and tests the SVM's accuracy on a separate, fixed 20% of the data set. The program then increases the training set according to the specified learning algorithm, retrains the SVM, and tests the accuracy again on the test set. This process repeats until the training set reaches a certain size. The accuracy at each iteration of the training/testing process is written to an output file, and is plotted once the program terminates using a gnuplot script.
+
+The SVM implementation used in this program is provided by scikit-learn. For more information regarding SVMs, machine learning, or scikit-learn's SVM implementation, scikit-learn's website would be a good place to start: http://scikit-learn.org/stable/.
+
+In order to run the program, execute any of the shell scripts in this repository, like so: ./ionosphere_train.sh
